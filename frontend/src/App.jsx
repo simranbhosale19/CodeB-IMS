@@ -1,5 +1,7 @@
 import { useEffect } from "react";
 import { useState } from "react";
+
+import CustomerGroups from "./CustomerGroups";
 import "./App.css";
 
 const initialUsers = [
@@ -629,6 +631,8 @@ async function addUser(event) {
                   </table>
                 </div>
               </section>
+           
+            
             ) : (
               <section className="panel">
                 <span className="role-badge">SALES PERSON</span>
@@ -639,6 +643,11 @@ async function addUser(event) {
                 </p>
               </section>
             )}
+ 
+              <section className="panel">
+                <CustomerGroups />
+              </section>
+
 
             <div className="session-note">
               <span>●</span> Demo session active
