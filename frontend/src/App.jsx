@@ -4,6 +4,7 @@ import { useState } from "react";
 import CustomerGroups from "./CustomerGroups";
 import ChainManagement from "./ChainManagement";
 import BrandManagement from "./BrandManagement";
+import EstimateManagement from "./EstimateManagement";
 import ZoneManagement from "./ZoneManagement";
 import "./App.css";
 
@@ -654,6 +655,7 @@ async function addUser(event) {
             <ChainManagement />
             <BrandManagement />
             <ZoneManagement />
+            <EstimateManagement />
             <div className="session-note">
               <span>●</span> Demo session active
               <button className="text-btn" onClick={logout}>
