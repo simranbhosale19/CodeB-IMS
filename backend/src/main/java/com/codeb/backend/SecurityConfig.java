@@ -32,7 +32,7 @@ public class SecurityConfig {
         );
 
         configuration.setAllowedMethods(
-            List.of("GET", "POST", "PUT", "DELETE", "OPTIONS")
+            List.of("GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS")
         );
 
         configuration.setAllowedHeaders(List.of("*"));
@@ -56,6 +56,9 @@ public class SecurityConfig {
             .csrf(csrf -> csrf.disable())
             .authorizeHttpRequests(auth -> auth
                 .requestMatchers("/api/auth/**").permitAll()
+                .requestMatchers("/api/groups/**").permitAll()
+                .requestMatchers("/api/chains/**").permitAll()
+                .requestMatchers(org.springframework.http.HttpMethod.OPTIONS, "/**").permitAll()
                 .anyRequest().authenticated()
             );
 
