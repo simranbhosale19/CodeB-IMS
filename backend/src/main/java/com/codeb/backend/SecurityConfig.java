@@ -58,6 +58,7 @@ public class SecurityConfig {
                 .requestMatchers("/api/auth/**").permitAll()
                 .requestMatchers("/api/groups/**").permitAll()
                 .requestMatchers("/api/chains/**").permitAll()
+                .requestMatchers("/api/brands/**").permitAll()
                 .requestMatchers(org.springframework.http.HttpMethod.OPTIONS, "/**").permitAll()
                 .anyRequest().authenticated()
             );

@@ -3,6 +3,7 @@ import { useState } from "react";
 
 import CustomerGroups from "./CustomerGroups";
 import ChainManagement from "./ChainManagement";
+import BrandManagement from "./BrandManagement";
 import "./App.css";
 
 const initialUsers = [
@@ -650,6 +651,7 @@ async function addUser(event) {
               </section>
 
             <ChainManagement />
+            <BrandManagement />
             <div className="session-note">
               <span>●</span> Demo session active
               <button className="text-btn" onClick={logout}>
